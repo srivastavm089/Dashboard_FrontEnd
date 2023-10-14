@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.nav-par{
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+  min-height:50px;
+
+  max-height: 50px;
+ 
+}
+.nav-par a{
+  text-decoration: none;
+  color: black;
+  padding: 1vh;
+}
+.nav-par .active{
+  border-bottom: 2px solid red;
+
+
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  background: lightblue;
+  width: 100%;
+  text-align: center;
+  padding: 2vh;
+}
