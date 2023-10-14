@@ -33,3 +33,15 @@
   text-align: center;
   padding: 2vh;
 }
+table, tr, tbody,td, th{
+   border: 1px solid black;
+   border-collapse: collapse;
+   
+}
+td,th{
+  padding: 2vh;
+}
+table{
+  width: 80vh;
+  text-align: center;
+}
