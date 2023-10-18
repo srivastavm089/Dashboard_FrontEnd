@@ -24,8 +24,9 @@ let result = await fetch('http://localhost:5000/login', {
 })
 result = await result.json();
 console.log(result);
-if(result.name){
- localStorage.setItem('data', JSON.stringify(result));
+if(result.auth){
+ localStorage.setItem('data', JSON.stringify(result.data));
+ localStorage.setItem('token', JSON.stringify(result.auth));
  navidate('/')
 }else{
     alert("please enter correct password")

@@ -26,10 +26,13 @@ const SignUp = () => {
         "Content-Type":'application/json'
       }
     });
-     result = await result.json()
+     result = await result.json();
+     console.log(result)
     if(result.message==="done"){
       navigate('/');
-      localStorage.setItem('data', JSON.stringify(result.result))
+      localStorage.setItem('data', JSON.stringify(result.newResult));
+      localStorage.setItem('data', JSON.stringify(result.auth));
+
     }else{
       alert("user already register")
       navigate('/signup')

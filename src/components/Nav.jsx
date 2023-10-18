@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 const Nav = () => {
   const auth = localStorage.getItem("data");
-  const {name} = auth;
+  const {name} = auth || {};
    console.log(name)
   const navigate = useNavigate();
   const logout = () => {
@@ -21,8 +21,8 @@ const Nav = () => {
             {" "}
             <NavLink to="/">Home Page</NavLink>
             <NavLink to="/add">Add Product</NavLink>
-            <NavLink to="/update">Update Product</NavLink>
-            <NavLink to="/delete">Delete Product</NavLink>
+            <NavLink to="/update/">Update Product</NavLink>
+      
             <NavLink to="/profile">Profile</NavLink>
             <NavLink to="/login" onClick={logout}>
               Logout {auth.name}
